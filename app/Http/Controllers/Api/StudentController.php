@@ -35,14 +35,14 @@ class StudentController extends Controller
 
         $validator = Validator::make($request->all(), 
         [
-            'id' => 'required',
-            'name' => 'requred|string',
+            'id' => 'required|unique:students,id',
+            'name' => 'required|string',
             'course' => 'required|string',
-            'year' => 'required'
+            'year' => 'required|integer'
         ]);
 
         if ($validator->fails()) {
-            $responseData['message'] = $validator->error()->first();
+            $responseData['message'] = 'Student already has an attendance today';
 
             return response()->json($responseData, 400);
         };
@@ -53,6 +53,7 @@ class StudentController extends Controller
             'course' => $request['course'],
             'year' => $request['year']
         ]);
+
 
         if ($student == null)
         {
