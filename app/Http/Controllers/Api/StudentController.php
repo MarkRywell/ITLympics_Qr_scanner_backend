@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 
 class StudentController extends Controller
 {
@@ -33,22 +34,31 @@ class StudentController extends Controller
             'data' => null
         ];
 
-        $validator = Validator::make($request->all(), 
+        $validator = Validator::make($request->all(),
         [
-            'id' => 'required|unique:students,id',
+            'day' => 'required',
+            'student_id' => [
+                'required',
+                Rule::unique('students')->where(function ($query) use ($request) {
+                    $query->where('day', $request->day);
+                })
+            ],
             'name' => 'required|string',
             'course' => 'required|string',
             'year' => 'required|integer'
-        ]);
+        ]
+        );
 
         if ($validator->fails()) {
             $responseData['message'] = 'Student already has an attendance today';
-
             return response()->json($responseData, 400);
         };
 
+
         $student = Student::create([
             'id' => $request['id'],
+            'day' => $request['day'],
+            'student_id' => $request['student_id'],
             'name' => $request['name'],
             'course' => $request['course'],
             'year' => $request['year']
