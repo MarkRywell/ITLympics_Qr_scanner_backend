@@ -6,16 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code</title>
     <style>
+        body {
+            background-image: url('photos/blur-bg.png');
+        }
         .container {
             margin: auto;
             width: 50%;
             text-align: center;
+            padding-top: 10%;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
         }
     </style>
 </head>
 <body>
     <div class='container'>
         <p>{{ $qr_code }}</p>
+        <h1 style="color: white; font-family:'Times New Roman', Times, serif; font-size: 50">{{ $day }}</h1>
     </div>
+    
 </body>
 </html>

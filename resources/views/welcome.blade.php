@@ -6,27 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITLympics QR Code Attendance</title>
-    <style>
-        #submit_btn {
-            width:20ex;
-            margin-top: 20;
-            margin-bottom: 20;
-        }
-
-        #qr_data {
-            margin-top: 20;
-            margin-bottom: 50;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <div style="margin: auto; width: 50%; text-align: center">
-        <h1>ITLympics Event</h1>
-        <h2>Input Day</h2>
+    <div id="form-input">
+        <h1 style="font-family:Georgia, 'Times New Roman', Times, serif;">ITLYMPICS EVENT</h1>
+
         <form action="/qr" method="POST">
             @csrf
-            <label for="qr_data">Event: </label>
-            <input type="text" id="qr_data" name="qr_data"><br>
+            <div class="input-field">
+            <span>Event Day: </span>
+            <input type="text" id="qr_data" name="qr_data" required="required"><br>
+            </div>
             <button id="submit_btn">Submit</button>
         </form>
 
