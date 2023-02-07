@@ -15,8 +15,8 @@
         <form action="/qr" method="POST">
             @csrf
             <div class="input-field">
-            <span>Event Day: </span>
-            <input type="text" id="qr_data" name="qr_data" required="required"><br>
+            <input type="text" id="qr_data" name="qr_data" required="required">
+            <span style="font-family:Arial, Helvetica, sans-serif; font-weight: bold;">EVENT DAY</span>
             </div>
             <button id="submit_btn">Submit</button>
         </form>
