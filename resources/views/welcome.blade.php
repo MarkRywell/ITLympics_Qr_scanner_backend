@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="form-input">
-        <h1 style="font-family:Georgia, 'Times New Roman', Times, serif;">ITLYMPICS EVENT</h1>
+        <h1 style="font-family:Georgia, 'Times New Roman', Times, serif; color: white; font-size: 2vw">ITLYMPICS EVENT</h1>
 
         <form action="/qr" method="POST">
             @csrf
