@@ -17,9 +17,6 @@
             padding-top: 10%;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
-            background-image: url('photos/itlympics.png');
-            margin-top: 10%;
-            padding: 20px;
         }
     </style>
 </head>
