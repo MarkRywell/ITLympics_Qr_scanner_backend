@@ -7,7 +7,7 @@
     <title>QR Code</title>
     <style>
         body {
-            background-image: url('photos/blur-bg.png');
+            background-image: url('photos/landing-page-bg.png');
         }
         .container {
             margin: auto;
@@ -23,7 +23,7 @@
 <body>
     <div class='container'>
         <p>{{ $qr_code }}</p>
-        <h1 style="color: white; font-family:'Times New Roman', Times, serif; font-size: 50">{{ $day }}</h1>
+        <h1 style="color: white; font-family:'Times New Roman', Times, serif; font-size: 50; color:#3e372f">{{ $day }}</h1>
     </div>
     
 </body>

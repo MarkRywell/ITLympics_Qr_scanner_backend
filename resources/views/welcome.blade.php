@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITLympics QR Code Attendance</title>
+    <title>LycanFest QR Code Attendance</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="photos/LFAS-icon.png">
 </head>
 <body>
     <div id="form-input">
-        <h1 style="font-family:Georgia, 'Times New Roman', Times, serif; color: white; font-size: 2vw">ITLYMPICS EVENT</h1>
+        <h1 style="font-family:Georgia, 'Times New Roman', Times, serif; color: #604a34; font-size: 2vw">LYCAN FEST EVENT</h1>
 
         <form action="/qr" method="POST">
             @csrf
@@ -21,11 +22,11 @@
                 <option value="Day 3">Day 3</option>
                 <option value="Day 4">Day 4</option>
                 <option value="Day 5">Day 5</option>
+                <option value="Day 6">Day 6</option>
             </select>
-            <!-- <input type="text" id="qr_data" name="qr_data" required="required"> -->
-            <span style="font-family:Arial, Helvetica, sans-serif; font-weight: bold;">EVENT DAY</span>
+            <span style="font-family:Arial, Helvetica, sans-serif; font-weight: bold; color: #604a34">EVENT DAY</span>
             </div>
-            <button id="submit_btn">Submit</button>
+            <button id="submit_btn">SUBMIT</button>
         </form>
 
     </div>
